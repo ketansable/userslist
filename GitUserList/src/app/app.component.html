@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      Sort
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input (keyup)="onSearch($event)" type="text" placeholder="Search users..." class="form-control">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+<div></div>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let user of gitUsers" class="col-xs-6 col-md-2">
+      {{user.login}}
+    </div>
+  </div>
+</div>

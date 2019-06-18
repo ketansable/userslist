@@ -11,8 +11,19 @@ export class GitUsersService {
 
 	constructor(private api: GitApiService) { }
 
-	getUsers(): Observable<GitUsers[]> { 
+	getUsers(login?: string): Observable<GitUsers[]> { 
 		let endPoint = '/users';
-		return this.api.get(endPoint);
+		if(login) {
+			return this.api.get(endPoint+'/'+login+'/repos');
+		}
+		else {
+			return this.api.get(endPoint);
+		}
 	}
+	
+	search(q: string): Observable<any> {
+        let endPoint = '/search/users?q=' + q;
+        return this.api.get(endPoint);
+
+    }
 }

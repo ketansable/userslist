@@ -1,0 +1,28 @@
+.page-header{
+    background-color: #0052cc;
+    padding: 25px;
+    margin: 0%;
+    width: 100%;
+}
+.container-fluid{
+    background-color:#f5f7f7;
+    min-height: 1021px;
+}
+.center-block{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3%;
+}
+
+.user-name{
+    font-size: large;
+    font-weight: 500;
+}
+
+.user-card{
+    padding-right: 3%; 
+    padding-left: 3%
+}
+
+li { background: white; }
+li:nth-child(odd) { background: #f5f4f4; }
